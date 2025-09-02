@@ -1,21 +1,18 @@
-project_name: default_lumora_project
-version: 0.1.0
-authors: []
-description: A Lumora project.
+project_name: stdlib
+version: 1.0.0
+authors:
+  - "NEOAPPS <asd22.info@gmail.com>"
+description: The Lumora Programming Language Standard Library.
 build_settings:
   output_dir: build
   optimization_level: O0
-  debug_info: true
+  debug_info: false
   target_triple: ''
   output_type: SharedLibrary
 source_files:
 - src/**/*.lum
-- test.lum
 external_dependencies: []
 linker_settings:
   libraries: []
   flags: []
-test_settings:
-  run_tests_on_build: true
-  test_dir: tests
 dependencies: []
