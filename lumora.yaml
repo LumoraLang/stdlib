@@ -1,0 +1,21 @@
+project_name: default_lumora_project
+version: 0.1.0
+authors: []
+description: A Lumora project.
+build_settings:
+  output_dir: build
+  optimization_level: O0
+  debug_info: true
+  target_triple: ''
+  output_type: SharedLibrary
+source_files:
+- src/**/*.lum
+- test.lum
+external_dependencies: []
+linker_settings:
+  libraries: []
+  flags: []
+test_settings:
+  run_tests_on_build: true
+  test_dir: tests
+dependencies: []
