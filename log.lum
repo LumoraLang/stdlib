@@ -1,5 +1,4 @@
 use stdlib/io;
-ext fn exit(i32): i32;
 exp fn info(s string): void {
   println("[?] " + s);
 }
