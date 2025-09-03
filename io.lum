@@ -4,10 +4,62 @@ ext fn filewrite(string, string) -> i32;
 ext fn fileappend(string, string) -> i32;
 ext fn fileread(string) -> string;
 ext fn fileexists(string) -> bool;
+ext fn eprintf(string) -> i32;
+ext fn read_line() -> string;
+ext fn flush() -> i32;
+ext fn getchar() -> i32;
+ext fn putchar(i32) -> i32;
+ext fn mkdir(string, i32) -> i32;
+ext fn rmdir(string) -> i32;
+ext fn remove_file(string) -> i32;
+ext fn rename(string, string) -> i32;
+ext fn copy_file(string, string) -> i32;
+ext fn is_directory(string) -> bool;
+ext fn is_file(string) -> bool;
+ext fn file_size(string) -> i64;
 exp fn print(s string) -> i32 {
   return printf(s);
 }
 
 exp fn println(s string) -> i32 {
   return printf(s + "\n");
+}
+exp fn eprintln(s string) -> i32 {
+  return eprintf(s + "\n");
+}
+exp fn readln() -> string {
+  return read_line();
+}
+exp fn flush_output() -> i32 {
+  return flush();
+}
+exp fn getch() -> i32 {
+  return getchar();
+}
+exp fn putch(c i32) -> i32 {
+  return putchar(c);
+}
+exp fn make_dir(path string) -> i32 {
+  return mkdir(path, 511);
+}
+exp fn remove_dir(path string) -> i32 {
+  return rmdir(path);
+}
+exp fn delete_file(path string) -> i32 {
+  return remove_file(path);
+}
+exp fn rename_path(old_path string, new_path string) -> i32 {
+  return rename(old_path, new_path);
+}
+exp fn copy_path(src string, dest string) -> i32 {
+  return copy_file(src, dest);
+}
+exp fn is_dir(path string) -> bool {
+  return is_directory(path);
+}
+exp fn is_file(path string) -> bool {
+  return is_file(path);
+}
+exp fn get_file_size(path string) -> i64 {
+  return file_size(path);
 }
