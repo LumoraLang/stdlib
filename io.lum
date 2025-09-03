@@ -1,13 +1,13 @@
-ext fn exit(i32): i32;
-ext fn printf(string): i32;
-ext fn filewrite(string, string): i32;
-ext fn fileappend(string, string): i32;
-ext fn fileread(string): string;
-ext fn fileexists(string): bool;
-exp fn print(s string): i32 {
+ext fn exit(i32) -> i32;
+ext fn printf(string) -> i32;
+ext fn filewrite(string, string) -> i32;
+ext fn fileappend(string, string) -> i32;
+ext fn fileread(string) -> string;
+ext fn fileexists(string) -> bool;
+exp fn print(s string) -> i32 {
   return printf(s);
 }
 
-exp fn println(s string): i32 {
+exp fn println(s string) -> i32 {
   return printf(s + "\n");
 }
