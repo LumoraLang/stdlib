@@ -3,6 +3,6 @@ exp fn assert(cond bool, msg string) -> i32 {
     if !cond {
         err(msg);
         return 1;
-    } else {}
+    }
     return 0;
 }
