@@ -1,6 +1,6 @@
 use stdlib/io;
 exp fn info(s string) -> void {
-  println("[?] " + s);
+  println("\e[0m[?] " + s);
 }
 
 exp fn err(s string) -> i32 {
