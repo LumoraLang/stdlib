@@ -27,6 +27,9 @@ exp fn println(s string) -> i32 {
 exp fn eprintln(s string) -> i32 {
   return eprintf(s + "\n");
 }
+exp fn eprint(s string) -> i32 {
+  return eprintf(s);
+}
 exp fn readln() -> string {
   return read_line();
 }
